@@ -150,7 +150,7 @@ async function exportDb() {
 .io button {
   @apply m-0 truncate;
   &:nth-of-type(1) {
-    @apply min-w-24 max-w-[420px] rounded-r-none;
+    @apply min-w-24 max-w-105 rounded-r-none;
   }
   &:nth-of-type(2) {
     @apply bg-(--primary-color) text-(--primary-text) rounded-l-none;
