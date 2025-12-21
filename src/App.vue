@@ -31,7 +31,12 @@ import { useAppStore, useQueueStore, useSettingsStore } from '@/store';
 import { useComponentsStore, routeMap } from './store/components';
 import router from './router';
 
-import { toasterOptions, AppLog, parseId, setEventHook } from '@/services/utils';
+import {
+  toasterOptions,
+  AppLog,
+  parseId,
+  setEventHook,
+} from '@/services/utils';
 import { fetchUser, activateCookies } from '@/services/login';
 import * as clipboard from '@/services/clipboard';
 import { commands } from '@/services/backend';

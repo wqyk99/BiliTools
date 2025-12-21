@@ -9,7 +9,7 @@ import { getVersion as getAppVersion } from '@tauri-apps/api/app';
 
 import '@/style.css';
 import '@vuepic/vue-datepicker/dist/main.css';
-import 'vue-sonner/style.css'
+import 'vue-sonner/style.css';
 
 window.onerror = (_, __, ___, ____, e) => {
   if (e) new AppError(e, { name: 'WindowError' }).handle();
@@ -23,11 +23,7 @@ window.onunhandledrejection = (e) => {
   new AppError(e.reason, { name: 'UnhandledRejection' }).handle();
 };
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .use(i18n)
-  .mount('#app');
+createApp(App).use(store).use(router).use(i18n).mount('#app');
 
 const version = await getAppVersion();
 console.log(

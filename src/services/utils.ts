@@ -22,7 +22,11 @@ export const toasterOptions: ToasterProps = {
   theme: 'system',
 };
 
-export function AppLog(message: string, type: 'success' | 'info' | 'warning' | 'error', trace?: string) {
+export function AppLog(
+  message: string,
+  type: 'success' | 'info' | 'warning' | 'error',
+  trace?: string,
+) {
   const options: ExternalToast = {
     classes: {
       toast: 'min-w-fit',
@@ -50,7 +54,7 @@ export function AppLog(message: string, type: 'success' | 'info' | 'warning' | '
   }
 
   if (trace) {
-    options.classes!.title += " text-sm"
+    options.classes!.title += ' text-sm';
   }
 
   toast[type](message, options);
